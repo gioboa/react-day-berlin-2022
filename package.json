@@ -1,0 +1,42 @@
+{
+	"name": "react-day-berlin-2022",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "run-s prisma:migrate prisma:generate && next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"prisma:studio": "prisma studio --schema=./prisma/schema.prisma",
+		"prisma:migrate": "prisma migrate dev --name init --schema=./prisma/schema.prisma",
+		"prisma:generate": "prisma generate --schema=./prisma/schema.prisma"
+	},
+	"dependencies": {
+		"@prisma/client": "^4.6.1",
+		"@trpc/client": "10.4.2",
+		"@trpc/next": "^10.4.2",
+		"@trpc/server": " 10.4.2",
+		"@types/node": "18.11.9",
+		"@types/react": "18.0.25",
+		"@types/react-dom": "18.0.9",
+		"eslint": "8.28.0",
+		"eslint-config-next": "13.0.5",
+		"next": "13.0.5",
+		"prisma": "^4.6.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"superjson": "1.11.0",
+		"typescript": "4.9.3",
+		"zod": "3.19.1"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.19",
+		"tailwindcss": "^3.2.4",
+		"tsx": "^3.12.1"
+	},
+	"prisma": {
+		"seed": "tsx prisma/seed.ts"
+	}
+}
